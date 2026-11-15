@@ -1,5 +1,6 @@
 # chronicle-db
 
+## To-Do
 - [x] REPL
 - [ ] Tokenizer
 - [ ] Parser

@@ -1,4 +1,21 @@
-/target
+# Rust
+/target/
+**/*.rs.bk
+*.pdb
 
+# Vim / Neovim swap and backup files
 *.swp
 *.swo
+*.swn
+*~
+.*.sw[a-p]
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# IDEs & Editors
+.vscode/
+.idea/

@@ -65,8 +65,9 @@ impl Repl {
          */
 
         match cmd {
-            ".exit" => return false,
-            _       => println!("Invalid command {}.", cmd)
+            ".exit"     => return false,
+            ".help"     => println!(".exit to quit the program"),
+            _           => println!("Invalid command {}.", cmd)
         }
 
         true
