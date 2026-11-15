@@ -1,6 +1,6 @@
-mod repl;
+mod shell;
 
-use repl::Repl;
+use crate::shell::repl::Repl;
 
 fn main() {
    let mut repl = Repl::new();
