@@ -1,6 +1,6 @@
 # chronicle-db
 
-- [*] REPL
+- [x] REPL
 - [] Tokenizer
 - [] Parser
 - [] Schema & Value Representation
