@@ -3,5 +3,12 @@
 version = 4
 
 [[package]]
-name = "chronicle-db"
+name = "chronicle-engine"
 version = "0.1.0"
+
+[[package]]
+name = "chronicle-shell"
+version = "0.1.0"
+dependencies = [
+ "chronicle-engine",
+]

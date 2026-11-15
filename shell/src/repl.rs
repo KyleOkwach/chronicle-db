@@ -56,18 +56,19 @@ impl Repl {
          * Execute SQL Command
          */
 
-        println!("Running command {}...", sql);
+        println!("Running command {}", sql);
     }
 
     fn execute_meta(&self, cmd: &str) -> bool {
         /*
          * Execute meta command
+         * These are non-SQL commands
          */
 
         match cmd {
             ".exit"     => return false,
             ".help"     => println!(".exit to quit the program"),
-            _           => println!("Invalid command {}.", cmd)
+            _           => println!("Unrecognized command {}.", cmd)
         }
 
         true
