@@ -1,4 +1,5 @@
 use std::io::{ self, Write };
+use crate::meta;
 
 pub struct Repl {
     buffer: String,
@@ -33,8 +34,8 @@ impl Repl {
                 continue;
             }
 
-            if trimmed.starts_with('.') && !trimmed.contains('\n') {
-                if !self.execute_meta(trimmed) {
+            if trimmed.starts_with('\\') && !trimmed.contains('\n') {
+                if !meta::execute(trimmed) {
                     break;
                 }
 
@@ -57,21 +58,6 @@ impl Repl {
          */
 
         println!("Running command {}", sql);
-    }
-
-    fn execute_meta(&self, cmd: &str) -> bool {
-        /*
-         * Execute meta command
-         * These are non-SQL commands
-         */
-
-        match cmd {
-            ".exit"     => return false,
-            ".help"     => println!(".exit to quit the program"),
-            _           => println!("Unrecognized command {}.", cmd)
-        }
-
-        true
     }
 
     fn print_prompt(&self) -> io::Result<()> {

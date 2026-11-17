@@ -1,3 +1,4 @@
+mod meta;
 mod repl;
 
 use crate::repl::Repl;
